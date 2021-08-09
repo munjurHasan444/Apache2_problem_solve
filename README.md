@@ -9,38 +9,38 @@ Job for apache2.service failed because the control process exited with error cod
 
 apache2.service Failed Because the Control Process Exited with Error Code and apache2 service activation:failed perfect solution.
 
-$ systemctl restart apache2
-$ journal -xe 
-$ sudo apt-get purge apache2
-$ sudo apt autoremove apache2
-$ sudo apt-get purge apache2
-$ sudo apt-get purge apache2*
-$ sudo apt-get install apache2
-$ sudo service apache2 start
+$ systemctl restart apache2</br>
+$ journal -xe </br>
+$ sudo apt-get purge apache2</br>
+$ sudo apt autoremove apache2</br>
+$ sudo apt-get purge apache2</br>
+$ sudo apt-get purge apache2*</br>
+$ sudo apt-get install apache2</br>
+$ sudo service apache2 start</br>
 
-if step 1 is not working for you then you will follow step 2.
+if step 1 is not working for you then you will follow step 2.</br>
 
-step 2:
-Firstly check-in your machine is there Nginx service is running in your system using
+step 2:</br>
+Firstly check-in your machine is there Nginx service is running in your system using</br>
 
-sudo systemctl status nginx.service
-if it is running stop the service using
+sudo systemctl status nginx.service</br>
+if it is running stop the service using</br>
 
-sudo systemctl stop nginx.service
-and then check port 80 is there any process running on that port using
+sudo systemctl stop nginx.service</br>
+and then check port 80 is there any process running on that port using</br>
 
-sudo lsof -i tcp:80
-output:
+sudo lsof -i tcp:80</br>
+output:</br>
 
-    COMMAND PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-anydesk 950 root   22u  IPv4  39398      0t0  TCP bitcot-Latitude-7480:35993->hosted.by.datacamp.co.uk:http (ESTABLISHED)
-kill the process using
+    COMMAND PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME</br>
+anydesk 950 root   22u  IPv4  39398      0t0  TCP bitcot-Latitude-7480:35993->hosted.by.datacamp.co.uk:http (ESTABLISHED)</br>
+kill the process using</br>
 
-sudo kill 950
-Now your apache2 is ready, To start service open a new terminal Ctrl + Ail + T and start service using
+sudo kill 950</br>
+Now your apache2 is ready, To start service open a new terminal Ctrl + Ail + T and start service using</br>
 
-sudo systemctl  start apache2
-sudo service apache2 stop
-sudo service apache2 start
+sudo systemctl  start apache2</br>
+sudo service apache2 stop</br>
+sudo service apache2 start</br>
 
 here you go
